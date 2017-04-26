@@ -11,13 +11,14 @@ public class HowToHandleInterruptedException {
                 @Override
                 public void run() {
 //                    should always ensure that thread exists
-                    while(!Thread.currentThread().isInterrupted()){
+                    threadLoop:while(!Thread.currentThread().isInterrupted()){
 //                        Do something
                         try{
                             try {
 
                             }catch (InterruptedException ie){
 //                                break; this is not a good habit
+                                break threadLoop;
                             }
                         }catch (Exception e){
                             LOG.error(e.getMessage(),e);
