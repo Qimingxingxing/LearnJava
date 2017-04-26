@@ -9,9 +9,10 @@ public class UsingRunnable implements Runnable{
     }
     @Override
     public void run() {
-        for (int i = 0; i < 5; i++) {
-            count++;
-            System.out.println(count);
+        while (true){
+            for (int i = 0; i < 5; i++) {
+                count++;
+            }
         }
     }
 
