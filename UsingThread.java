@@ -4,7 +4,7 @@ package MultiThread;
  * Created by qimingzhang on 2017/4/25.
  */
 public class UsingThread extends Thread{
-    private int count = 0;
+    private volatile int count = 0;
     public UsingThread() {
     }
     @Override
