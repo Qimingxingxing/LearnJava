@@ -5,5 +5,6 @@ package MultiThread;
  */
 public class Lock {
     public Lock() {
+
     }
 }
