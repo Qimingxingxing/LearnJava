@@ -6,6 +6,6 @@ package MultiThread;
 public class Lock {
     int i = 0;
     public Lock() {
-
+        System.out.println("hello world");
     }
 }
