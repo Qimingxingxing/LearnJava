@@ -15,6 +15,20 @@ public class Counter {
         }
         System. out.println(Thread. currentThread().getName() + "--" + count);
     }
+//    请注意，同步代码块中有一个构造参数，这个参数值是一个对象，被
+// 称作监控对象，意思是同步的是此监控对象中的同步方法。上面这个例子中，（this）指的本对象
+//    public void add() {
+//        //同步代码块
+//        synchronized(this){
+//            count++;
+//            try {
+//                Thread.sleep(100);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            System.out.println(Thread.currentThread().getName() + "--" + count);
+//        }
+//    }
 
     static class CounterThread extends Thread {
         protected Counter counter = null;
