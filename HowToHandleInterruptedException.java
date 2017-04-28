@@ -6,7 +6,6 @@ package MultiThread;
 public class HowToHandleInterruptedException {
     public static void main(String[] args) {
         try {
-//            throw new InterruptedException();
             Thread myThread = new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -15,19 +14,21 @@ public class HowToHandleInterruptedException {
 //                        Do something
                         try{
                             try {
-
+                                throw new InterruptedException();
                             }catch (InterruptedException ie){
 //                                break; this is not a good habit
                                 break threadLoop;
                             }
                         }catch (Exception e){
-                            LOG.error(e.getMessage(),e);
+//                            LOG.error(e.getMessage(),e);
                             continue;
                         }
 //                        I'm doing something wrong here
                     }
                 }
             });
+                        throw new InterruptedException();
+
         }
         catch (InterruptedException ie){
             Thread.currentThread().interrupt();
@@ -35,4 +36,3 @@ public class HowToHandleInterruptedException {
         }
     }
 }
-=
