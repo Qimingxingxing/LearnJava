@@ -106,3 +106,5 @@ synchronized关键字可以同步方法和代码块
 同步是通过加锁的形式来控制的，让一个线程访问一个同步方法时会获得这个对象的锁，只有退出同步方法时才会释放这个锁，其它线程才可访问
 
 http://blog.csdn.net/suifeng3051/article/details/51852526
+wait(): 调用任何对象的wait()方法会让当前线程进入等待，直到另一个线程调用同一个对象的notify()或notifyAll()方法。
+notify():唤醒因调用这个对象wait()方法而阻塞的线程。
