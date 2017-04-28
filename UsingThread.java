@@ -13,6 +13,12 @@ public class UsingThread extends Thread{
             count++;
             System.out.println(count);
         }
+        try {
+            Thread.sleep(1);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new RuntimeException(e);
+        }
     }
 
     public static void main(String[] args) {
