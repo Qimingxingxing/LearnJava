@@ -110,3 +110,11 @@ wait(): 调用任何对象的wait()方法会让当前线程进入等待，直到
 notify():唤醒因调用这个对象wait()方法而阻塞的线程。
 
 http://blog.csdn.net/suifeng3051/article/details/49443835
+
+ExecutorService有如下几个执行方法：
+
+- execute(Runnable)
+- submit(Runnable)
+- submit(Callable)
+- invokeAny(...)
+- invokeAll(...)
