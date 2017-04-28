@@ -108,3 +108,5 @@ synchronized关键字可以同步方法和代码块
 http://blog.csdn.net/suifeng3051/article/details/51852526
 wait(): 调用任何对象的wait()方法会让当前线程进入等待，直到另一个线程调用同一个对象的notify()或notifyAll()方法。
 notify():唤醒因调用这个对象wait()方法而阻塞的线程。
+
+http://blog.csdn.net/suifeng3051/article/details/49443835
