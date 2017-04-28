@@ -1,5 +1,7 @@
 package MultiThread;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.*;
 
 /**
@@ -34,6 +36,30 @@ public class ExecutorsTest {
         System.out.println("future.get() = " + future.get());
 
         executorService.shutdown();
+
+        ExecutorService anotherExecutorService = Executors.newSingleThreadExecutor();
+
+        Set<Callable<String>> callables = new HashSet<Callable<String>>();
+
+        callables.add(new Callable<String>() {
+            public String call() throws Exception {
+                return "Task 1";
+            }
+        });
+        callables.add(new Callable<String>() {
+            public String call() throws Exception {
+                return "Task 2";
+            }
+        });
+        callables.add(new Callable<String>() {
+            public String call() throws Exception {
+                return "Task 3";
+            }
+        });
+
+        String result = anotherExecutorService.invokeAny(callables);
+        System.out.println("result = " + result);
+        anotherExecutorService.shutdown();
 
     }
 }
