@@ -1,4 +1,4 @@
-package MultiThread;
+package LearnJava;
 
 /**
  * Created by qimingzhang on 2017/4/26.

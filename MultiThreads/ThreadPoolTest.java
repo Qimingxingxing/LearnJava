@@ -1,4 +1,4 @@
-package MultiThread.MultiThreads;
+package LearnJava.MultiThreads;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;

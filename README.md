@@ -1,2 +1,1 @@
-撸java就是那么的爽！！！！！
-keep moving！ BRO
+I love Java, but I love Python more!
