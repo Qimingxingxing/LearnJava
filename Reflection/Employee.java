@@ -1,5 +1,5 @@
 package LearnJava.Reflection;
-
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 
 /**
@@ -16,10 +16,8 @@ public class Employee {
         return name;
     }
 
-    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException, InstantiationException {
-        Employee employee = new Employee("hi");
-        Class c = employee.getClass();
-        Field name = c.getDeclaredField("name");
-        Object newEmployee = c.newInstance();
+    public static void main(String[] args) throws Exception {
+        Class<?> c = Class.forName("LearnJava.Reflection.Employee");
+        Employee newEmployee = (Employee) c.newInstance();
     }
 }
