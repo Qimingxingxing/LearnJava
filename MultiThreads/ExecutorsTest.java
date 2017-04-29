@@ -1,4 +1,4 @@
-package MultiThread;
+package MultiThread.MultiThreads;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package MultiThread;
+package MultiThread.MultiThreads;
 
 import java.io.IOException;
 
