@@ -1,0 +1,31 @@
+http://blog.csdn.net/suifeng3051/article/details/51791812
+为何使用内部类
+
+内部类提供了更好的封装，只有外部类能访问内部类
+内部类可以独立继承一个接口，不受外部类是否继承接口影响
+内部类中的属性和方法即使是外部类也不能直接访问，相反内部类可以直接访问外部类的属性和方法，即使private
+利于回调函数的编写
+
+是因为在创建外部类时，内部类会自动捕获一个外部类的引用，所以内部类访问外部类元素，实际上是通过他所持有外部类引用访问的。
+在Java中，我们可以通过OuterClass.this来获得外部类的引用
+
+public class OuterClass {
+    public void display(){
+        System.out.println("this is OuterClass...");
+    }
+    public class InnerClass{
+        //获取外部类的引用
+        public OuterClass getOuterClass(){
+            return OuterClass.this;
+        }
+        public void innerDisplay(){
+            //内部类也可以通过外部类的引用访问外部元素
+            getOuterClass().display();
+        }
+    }
+    public static void main(String[] args) {
+        OuterClass outerClass = new OuterClass();
+        OuterClass.InnerClass innerClass = outerClass.new InnerClass();
+        innerClass.innerDisplay();
+    }
+}
