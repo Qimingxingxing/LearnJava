@@ -37,5 +37,6 @@ public class OuterClass {
         OuterClass.InnerClass innerClass = test.new InnerClass();
         innerClass.display();
         test.outerDisplay();
+        InnerStaticClass staticClass = new InnerStaticClass();
     }
 }
