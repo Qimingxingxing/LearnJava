@@ -8,7 +8,7 @@ import java.lang.reflect.Modifier;
  */
 public class ReflectionTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
         //第一种方式：
         Class classc1 = null;
         try {
@@ -43,6 +43,20 @@ public class ReflectionTest {
         sb.append("}");
 
         System.out.println(sb);
+
+        ReflectionTest reflectionTest = new ReflectionTest();
+        System.out.println(reflectionTest.getClass().getName());
+
+        Class<?> class1 = null;
+        Class<?> class2 = null;
+        Class<?> class3 = null;
+        // 一般采用这种形式
+        class1 = Class.forName("LearnJava.Reflection.ReflectionTest");
+        class2 = new ReflectionTest().getClass();
+        class3 = ReflectionTest.class;
+        System.out.println("类名称   " + class1.getName());
+        System.out.println("类名称   " + class2.getName());
+        System.out.println("类名称   " + class3.getName());
 
     }
 }
