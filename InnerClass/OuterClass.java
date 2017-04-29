@@ -9,18 +9,27 @@ public class OuterClass {
         InnerClass innerClass = new InnerClass();
         innerClass.display();
     }
+    public static void outerStaticMethod(){
+
+    }
     public class InnerClass{
         public InnerClass() {
             outerString = "qiming";
         }
         public void display(){
             System.out.println(outerString);
+            outerStaticMethod();
         }
 /*
         public static void staticInnerMethod(){
             inner class cannot have static method declaration
         }
 */
+    }
+    public static class InnerStaticClass{
+        public InnerStaticClass() {
+//            outerDisplay();
+        }
     }
 
     public static void main(String[] args) {
