@@ -22,6 +22,6 @@ public class CollectionsExchange {
 //        Array转换为Set
         Set<String> set = new HashSet<String>(Arrays.asList(countries));
 //        map -> set
-        Set<String> targetSet = new HashSet<>(map.values());
+        Set<Integer> targetSet = new HashSet<>(map.values());
     }
 }
