@@ -24,5 +24,11 @@ public class StringTest {
 
         charSequence = qiming.subSequence(0, qiming.length());
         System.out.println(charSequence.toString().charAt(0));
+
+        StringBuilder sb = new StringBuilder(qiming);
+        sb.append("");
+        sb.toString();
+        sb.delete(1,2);
+        System.out.println(sb.toString());
     }
 }
