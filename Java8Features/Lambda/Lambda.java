@@ -1,6 +1,7 @@
 package LearnJava.Java8Features.Lambda;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -9,11 +10,19 @@ import java.util.function.Function;
  * Created by qimingzhang on 2017/5/2.
  */
 public class Lambda {
+    private final String name;
     @FunctionalInterface
     interface LambdaInterface{
         void method();
     }
+
+
+    public Lambda(String name){
+        this.name = name;
+    }
+
     public static void method(String input){
+
         System.out.println("method reference! " + input);
     }
     public static void main(String[] args) {
@@ -36,9 +45,33 @@ public class Lambda {
           String.format("%s %s", value, another);
           return "marry me";
         };
-        Lambda thisClass = new Lambda();
+        Lambda thisClass = new Lambda("lambda");
         Consumer<String> consumer1 = input -> method(input);
         consumer1.accept("hello");
         Consumer<String[]> b2 = Arrays::sort;
+        Function<String, Lambda> lambdaConstructor = Lambda::new;
+        Function<Integer,String> stringifier = Object::toString;
+
+        // this is what is effectively final
+        int a = 1;
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(a);
+            }
+        };
+        String[] atp = {"Rafael Nadal", "Novak Djokovic",
+                "Stanislas Wawrinka",
+                "David Ferrer","Roger Federer",
+                "Andy Murray","Tomas Berdych",
+                "Juan Martin Del Potro"};
+        List<String> players =  Arrays.asList(atp);
+
+
+// 使用 lambda 表达式以及函数操作(functional operation)
+        players.forEach((player) -> System.out.print(player + "; "));
+
+// 在 Java 8 中使用双冒号操作符(double colon operator)
+        players.forEach(System.out::println);
     }
 }
