@@ -29,6 +29,5 @@ public class StringTest {
         sb.append("");
         sb.toString();
         sb.delete(1,2);
-        System.out.println(sb.toString());
     }
 }
