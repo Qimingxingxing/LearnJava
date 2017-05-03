@@ -11,10 +11,13 @@ public class OptionalTest {
 
         // Optional.ofNullable - 允许传递为 null 参数
         Optional<Integer> a = Optional.ofNullable(value1);
-
         // Optional.of - 如果传递的参数是 null，抛出异常 NullPointerException
         Optional<Integer> b = Optional.of(value2);
+        System.out.println(a.equals(b));
+
         System.out.println(java8Tester.sum(a,b));
+        Optional<String> optional =  Optional.ofNullable(null);
+        System.out.println(optional.flatMap(var->Optional.of(var.toUpperCase())));
     }
     public Integer sum(Optional<Integer> a, Optional<Integer> b){
 
