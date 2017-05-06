@@ -22,6 +22,7 @@ public class SimpleTest {
 
         //创建mock对象，参数可以是类，也可以是接口
         List<String> list = mock(List.class);
+        System.out.println(list.size());
 
         //设置方法的预期返回值
         when(list.get(0)).thenReturn("helloworld");
