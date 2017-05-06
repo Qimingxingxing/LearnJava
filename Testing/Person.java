@@ -5,12 +5,18 @@ package LearnJava.Testing;
  */
 public class Person {
     private final String name;
+    private final boolean happy;
 
-    public Person(String name) {
+    public Person(String name, boolean happy) {
         this.name = name;
+        this.happy = happy;
     }
 
     public String getName() {
         return name;
+    }
+
+    public boolean isHappy() {
+        return happy;
     }
 }
