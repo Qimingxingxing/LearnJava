@@ -19,6 +19,7 @@ public class WaitNotify extends Thread{
         synchronized (countThread){
             System.out.println("等到countThread线程计算结束...");
             try {
+                Thread.currentThread().interrupt();
                 countThread.wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
