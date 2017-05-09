@@ -5,15 +5,13 @@ package LearnJava.Generics;
  */
 //Wrong! since you are overriding a incompatible return type method!
 //public class Subclass<T> extends Superclass<Integer> {
-public class Subclass<T> extends Superclass<T> {
-    private T genericVar;
+public class Subclass<T> extends Superclass<Integer> {
+    private Integer genericVar;
     @Override
-    public T getGenericVar() {
+    public Integer getGenericVar() {
         return genericVar;
     }
     public static void main(String[] args) {
-        Subclass<String> sub = new Subclass<>();
-        Object genericVar = sub.getGenericVar();
-        System.out.println(genericVar);
+
     }
 }
