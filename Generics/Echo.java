@@ -13,6 +13,9 @@ public class Echo<T> {
         return value;
     }
 
+    public static <U> void print(U value){
+        System.out.println(value);
+    }
 //    public static T staticGeneric(T value){
 //        return value;
 //    }
@@ -22,5 +25,6 @@ public class Echo<T> {
         Echo<Number> numberEcho = new Echo<>();
         numberEcho.echo(new Echo<Integer>());
         numberEcho.echo(10);
+        print(1);
     }
 }
