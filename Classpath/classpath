@@ -1,0 +1,2 @@
+// java -cp ".:./log4j.jar:" Log4jTest
+// javac -cp ".:./log4j.jar" Log4jTest.java
