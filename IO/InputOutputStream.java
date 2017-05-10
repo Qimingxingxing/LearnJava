@@ -20,4 +20,18 @@ public class InputOutputStream {
             System.out.println(e.getMessage());
         }
     }
+    public void read(InputStream stream){
+        try {
+            int read = stream.read();
+            if (read == -1){
+                System.out.println("stream is closed");
+            } else{
+                byte byteRead = (byte) read;
+                System.out.println(Byte.toString(byteRead));
+            }
+
+        } catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+    }
 }
