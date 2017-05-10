@@ -39,7 +39,7 @@ public class Lambda {
             System.out.println(another);
             return value + " love " +  another;
         };
-        System.out.println(biFunction.apply("qiming", "yiming"));
+        System.out.println(biFunction.apply("qiming", "qiming"));
 
         biFunction = (value, another) -> {
           String.format("%s %s", value, another);

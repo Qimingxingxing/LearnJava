@@ -4,8 +4,11 @@ package LearnJava.Java8Features.Interface;
  * Created by qimingzhang on 2017/5/2.
  */
 public class Interface {
-    interface A {
+    public interface A {
         void doSomething();
+        default void defaultMethod(){
+            System.out.println("I'm a default method from A!");
+        }
         static void staticMethod(){
             System.out.println("I'm a static method from A");
         }
@@ -17,7 +20,7 @@ public class Interface {
             System.out.println("foo from interface A");
         }
     }
-    interface B extends A {
+    public interface B extends A {
         // redefine default method
         default void hello() {
             System.out.println("hello world from interface B");
@@ -28,7 +31,7 @@ public class Interface {
         abstract void foo(); // redeclare!!!!!
     }
 
-    static class C implements B, A{
+    public static class C implements B, A{
         @Override
         public void doSomething () {
             System.out.println("c object need do something");
@@ -44,5 +47,6 @@ public class Interface {
         obj.hello();//调用B的方法
         obj.doSomething();
         A.staticMethod();
+        obj.defaultMethod();
     }
 }
