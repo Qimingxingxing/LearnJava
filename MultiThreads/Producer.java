@@ -21,7 +21,7 @@ public class Producer extends Thread {
         }
     }
 
-    public synchronized void putMessage() throws InterruptedException {
+    public void putMessage() throws InterruptedException {
         while (messageBox.size() == MAX_BOX_SIZE) {
             this.wait();//当箱子满后则进入等待
         }

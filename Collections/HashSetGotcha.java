@@ -47,7 +47,9 @@ public class HashSetGotcha {
         set.add(foo);
         System.out.println(set.contains(foo));
         System.out.println(set.contains(new Item("foo")));
-        foo.setValue("foos");;
+        foo.setValue("foos");
+        System.out.println(set.contains(foo));
+        foo.setValue("foo");
         System.out.println(set.contains(foo));
     }
 }
