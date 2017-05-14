@@ -15,6 +15,7 @@ public class OuterClass {
 
     }
     public class InnerClass{
+        private int privateInt = 0;
         public InnerClass() {
             outerString = "qiming";
         }
